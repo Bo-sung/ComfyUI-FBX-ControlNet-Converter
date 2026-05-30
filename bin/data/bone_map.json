@@ -1,0 +1,45 @@
+{
+  "_about": "Bone-name normalization table, independently compiled from public rig naming conventions (Mixamo, Unreal Engine, Unity Humanoid, Blender/Rigify, DAZ, 3ds Max Biped, MakeHuman). Canonical keys are the normalized joint names; each list holds aliases seen across those tools. Maps any rig's bone names to a common skeleton for ControlNet pass extraction.",
+  "synonyms": {
+    "hips": ["hips", "hip", "pelvis", "root", "cog", "cg", "center", "bip01", "bippelvis", "hipcenter"],
+    "spine": ["spine", "spine0", "spine01", "spine1", "lowerback", "abdomen", "abdomenlower", "waist", "torso"],
+    "spine1": ["spine1", "spine2", "spine02", "chest", "chestlower", "midspine", "abdomenupper", "torso1"],
+    "spine2": ["spine2", "spine3", "spine03", "upperchest", "chestupper", "upperback", "torso2"],
+    "spine3": ["spine3", "spine4", "spine04", "chesthigh", "torso3"],
+    "neck": ["neck", "neck1", "neck01", "neck0", "cervical", "lowerneck"],
+    "head": ["head", "headtop", "skull"],
+
+    "leftshoulder": ["leftshoulder", "lshoulder", "shoulderl", "leftclavicle", "lclavicle", "claviclel", "clavicle_l", "leftcollar", "lcollar", "lscapula", "shoulder_l"],
+    "leftarm": ["leftarm", "larm", "leftupperarm", "lupperarm", "upperarm_l", "lshldr", "leftshldr", "lupperarmtwist", "arm_l", "lbicep"],
+    "leftforearm": ["leftforearm", "lforearm", "leftlowerarm", "llowerarm", "lowerarm_l", "leftelbow", "lelbow", "forearm_l", "lforearmtwist"],
+    "lefthand": ["lefthand", "lhand", "leftwrist", "lwrist", "hand_l", "wrist_l"],
+
+    "rightshoulder": ["rightshoulder", "rshoulder", "shoulderr", "rightclavicle", "rclavicle", "clavicler", "clavicle_r", "rightcollar", "rcollar", "rscapula", "shoulder_r"],
+    "rightarm": ["rightarm", "rarm", "rightupperarm", "rupperarm", "upperarm_r", "rshldr", "rightshldr", "rupperarmtwist", "arm_r", "rbicep"],
+    "rightforearm": ["rightforearm", "rforearm", "rightlowerarm", "rlowerarm", "lowerarm_r", "rightelbow", "relbow", "forearm_r", "rforearmtwist"],
+    "righthand": ["righthand", "rhand", "rightwrist", "rwrist", "hand_r", "wrist_r"],
+
+    "leftupleg": ["leftupleg", "lupleg", "leftthigh", "lthigh", "leftupperleg", "lupperleg", "upperleg_l", "thigh_l", "lefthip", "lhip", "lthighbend", "lthightwist"],
+    "leftleg": ["leftleg", "lleg", "leftlowerleg", "llowerleg", "lowerleg_l", "leftcalf", "lcalf", "calf_l", "leftknee", "lknee", "lshin", "shin_l"],
+    "leftfoot": ["leftfoot", "lfoot", "foot_l", "leftankle", "lankle", "ankle_l"],
+    "lefttoebase": ["lefttoebase", "ltoebase", "lefttoe", "ltoe", "lefttoes", "ltoes", "toes_l", "ball_l", "leftball", "lefttoe0", "ltoe0"],
+
+    "rightupleg": ["rightupleg", "rupleg", "rightthigh", "rthigh", "rightupperleg", "rupperleg", "upperleg_r", "thigh_r", "righthip", "rhip", "rthighbend", "rthightwist"],
+    "rightleg": ["rightleg", "rleg", "rightlowerleg", "rlowerleg", "lowerleg_r", "rightcalf", "rcalf", "calf_r", "rightknee", "rknee", "rshin", "shin_r"],
+    "rightfoot": ["rightfoot", "rfoot", "foot_r", "rightankle", "rankle", "ankle_r"],
+    "righttoebase": ["righttoebase", "rtoebase", "righttoe", "rtoe", "righttoes", "rtoes", "toes_r", "ball_r", "rightball", "righttoe0", "rtoe0"]
+  },
+  "fingers": ["thumb", "index", "middle", "ring", "pinky"],
+  "specialCases": {
+    "l_foot": "lefttoebase", "left_foot": "lefttoebase",
+    "r_foot": "righttoebase", "right_foot": "righttoebase",
+    "l_ankle": "leftfoot", "left_ankle": "leftfoot",
+    "r_ankle": "rightfoot", "right_ankle": "rightfoot",
+    "l_hip": "leftupleg", "left_hip": "leftupleg",
+    "r_hip": "rightupleg", "right_hip": "rightupleg",
+    "l_collar": "leftshoulder", "left_collar": "leftshoulder",
+    "r_collar": "rightshoulder", "right_collar": "rightshoulder",
+    "l_shoulder": "leftarm", "left_shoulder": "leftarm",
+    "r_shoulder": "rightarm", "right_shoulder": "rightarm"
+  }
+}

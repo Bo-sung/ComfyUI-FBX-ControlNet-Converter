@@ -1,0 +1,3 @@
+# Provided by ComfyUI already; listed for standalone/test environments.
+numpy
+Pillow

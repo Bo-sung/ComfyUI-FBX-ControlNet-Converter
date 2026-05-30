@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>FbxControlNetConverter.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- FBX/GLB import + skeletal animation. Silk.NET ships RELEASE native assimp
+         (asserts compiled out) so Mixamo rigs with pre/post-rotation chains load
+         without the FBXConverter debug-assert abort. -->
+    <PackageReference Include="Silk.NET.Assimp" Version="2.21.0" />
+    <!-- Offscreen OpenGL render backend (single engine for all passes). -->
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.21.0" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.21.0" />
+    <!-- PNG encode of framebuffer readback. -->
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Ship the bone-map table next to the binary. -->
+    <None Include="..\..\data\bone_map.json" Link="data\bone_map.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

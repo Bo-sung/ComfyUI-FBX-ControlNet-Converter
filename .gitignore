@@ -1,0 +1,12 @@
+# C# build artifacts (the publishable binary lives in /bin which is committed)
+cli/**/bin/
+cli/**/obj/
+
+# Python
+__pycache__/
+*.pyc
+
+# scratch / outputs
+_t/
+out/
+*.tmp

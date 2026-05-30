@@ -1,0 +1,3 @@
+# Bundled native binaries are tracked with Git LFS (~80 MB win-x64 build).
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
